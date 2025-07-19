@@ -1,0 +1,46 @@
+ /* Main layout styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Hero banner section */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/banner/ludwig-banner.jpg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* SVG tagline layer */
+.hero-svg {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  height: auto;
+}
+
+.hero-svg text {
+  font-size: 3rem;
+  fill: rgba(255, 0, 0, 0.85); /* LUDWIG red */
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 70vh;
+  }
+
+  .hero-svg text {
+    font-size: 2
