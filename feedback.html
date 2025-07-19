@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Feedback</title>
+  <title>Feedback | Chrome & Canvas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- LUDWIG Logo Top -->
+  <div class="logo-container">
+    <img src="images/logo.png" alt="LUDWIG Logo" class="logo-top">
+  </div>
+
+  <!-- Navigation -->
   <header>
-    <h1>Share Your Thoughts</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -17,26 +22,49 @@
     </nav>
   </header>
 
+  <!-- Banner Section -->
+  <section class="banner-section">
+    <img src="images/banner.png" alt="LUDWIG Banner">
+  </section>
+
+  <!-- Feedback Form -->
   <main>
-    <section class="form-section">
-      <form id="feedbackForm" novalidate>
-        <label for="name">Name<span>*</span></label>
+    <section class="intro">
+      <h2>Share Your Thoughts</h2>
+
+      <form id="feedback-form" class="feedback-form">
+        <label for="name">Name*</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="email">Email<span>*</span></label>
+        <label for="email">Email*</label>
         <input type="email" id="email" name="email" required>
 
-        <label for="message">Message<span>*</span></label>
+        <label for="message">Message*</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit">Submit</button>
-        <p id="feedbackMsg" class="hidden">Thanks for your feedback!</p>
       </form>
+
+      <div id="thank-you-message">
+        ✅ Thank you for visiting <strong>LUDWIG</strong> — your feedback drives us forward.
+      </div>
     </section>
   </main>
 
   <footer>
     <p>© 2025 LUDWIG Media</p>
   </footer>
+
+  <script>
+    const form = document.getElementById("feedback-form");
+    const thankYou = document.getElementById("thank-you-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.style.display = "none";
+      thankYou.style.display = "block";
+    });
+  </script>
+
 </body>
 </html>
