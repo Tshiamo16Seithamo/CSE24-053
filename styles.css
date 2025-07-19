@@ -1,4 +1,4 @@
- /* ========== Reset & Base Styles ========== */
+ /* ---------- Reset & Base ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,11 +12,24 @@ body {
   line-height: 1.6;
 }
 
-header {
-  background-color: #ffffff;
-  padding: 1.2rem;
-  border-bottom: 1px solid #eee;
+/* ---------- Logo Top ---------- */
+.logo-container {
   text-align: center;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-top {
+  max-width: 140px;
+  height: auto;
+}
+
+/* ---------- Header Navigation ---------- */
+header {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #fafafa;
 }
 
 nav a {
@@ -26,13 +39,8 @@ nav a {
   font-weight: 600;
 }
 
-main {
-  padding: 2rem;
-}
-
-/* ========== Banner Section ========== */
+/* ---------- Banner Section ---------- */
 .banner-section {
-  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -45,38 +53,18 @@ main {
   display: block;
 }
 
-/* Overlay Text */
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 2rem;
-  border-radius: 10px;
+/* ---------- Main & Intro ---------- */
+main {
+  padding: 2rem;
 }
 
-.banner-text h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
-
-.banner-text p {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-/* ========== Intro Section ========== */
 .intro {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* ========== Footer ========== */
+/* ---------- Footer ---------- */
 footer {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -85,14 +73,10 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ========== Responsive Design ========== */
+/* ---------- Responsive Design ---------- */
 @media (max-width: 768px) {
-  .banner-text h1 {
-    font-size: 2rem;
-  }
-
-  .banner-text p {
-    font-size: 1rem;
+  .logo-top {
+    max-width: 100px;
   }
 
   nav a {
@@ -102,5 +86,9 @@ footer {
 
   main {
     padding: 1rem;
+  }
+
+  .banner-section img {
+    object-position: center top;
   }
 }
